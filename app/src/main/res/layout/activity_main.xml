@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    style="@style/GlobalStyle"
     >
 
     <LinearLayout
@@ -14,95 +15,78 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_marginHorizontal="50dp"
-
     >
 
         <LinearLayout
             android:id="@+id/LayoutCelsius"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            style="@style/WidthParent_HeightWrap"
+            android:orientation="vertical"
+            >
             <TextView
-                android:layout_gravity="top"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Celsius:"
-                android:textSize="20sp"
-                />
-
+                style="@style/TextLabel"
+                tools:ignore="HardcodedText" />
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/WidthParent_HeightWrap"
                 app:hintEnabled="false"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/TextBox"
                     android:inputType="number"
-                    android:hint="0"
-                    />
+                    android:text="0"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+
+        <Space style="@style/SpaceStyle"/>
+
         <LinearLayout
             android:id="@+id/LayoutFahrenheit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/WidthParent_HeightWrap"
             android:orientation="vertical">
 
             <TextView
-                android:layout_gravity="top"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Fahrenheit:"
-                android:textSize="20sp"
-                />
+                style="@style/TextLabel"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/WidthParent_HeightWrap"
                 app:hintEnabled="false"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/TextBox"
                     android:inputType="number"
-                    android:hint="0"
-                    tools:ignore="HardcodedText" />
+                    android:text="32"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+
+        <Space style="@style/SpaceStyle"/>
+
         <LinearLayout
             android:id="@+id/LayoutButtons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/WidthParent_HeightWrap"
             android:orientation="horizontal"
             android:gravity="center"
             >
-            <Button
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonReset"
+                style="@style/BaseButton"
                 android:text="Reset"
                 tools:ignore="HardcodedText"
                 />
             <Space
                 android:layout_width="50dp"
                 android:layout_height="match_parent"/>
-            <Button
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonCalculate"
+                style="@style/BaseButton"
                 android:text="Calculate"
                 tools:ignore="HardcodedText" />
-
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
