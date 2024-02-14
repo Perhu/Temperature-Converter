@@ -16,7 +16,7 @@
         android:gravity="center"
         android:layout_marginHorizontal="50dp"
     >
-<!--this is the layout that holds the label and number field for Celsious-->
+<!--this is the layout that holds the label and number field for Celsius-->
         <LinearLayout
             android:id="@+id/LayoutCelsius"
             style="@style/WidthParent_HeightWrap"
@@ -24,6 +24,7 @@
             >
 <!--            this is the label for the number field-->
             <TextView
+                android:id="@+id/LabelCel"
                 android:text="Celsius:"
                 style="@style/TextLabel"
                 tools:ignore="HardcodedText" />
@@ -34,13 +35,14 @@
                 >
 <!--                this is the number input field-->
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NumberBoxCel"
                     style="@style/NumberBox"
                     android:inputType="number"
                     android:text="0"
                     tools:ignore="HardcodedText,TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-<!--        this makes some space between the elements, insteed of margin or padding-->
+<!--        this makes some space between the elements, instead of margin or padding-->
         <Space style="@style/SpaceStyle"/>
 <!--        this is the layout that hold the label and number field-->
         <LinearLayout
@@ -49,6 +51,7 @@
             android:orientation="vertical">
 <!--            this is the label for Fh.-->
             <TextView
+                android:id="@+id/LabelFh"
                 android:text="Fahrenheit:"
                 style="@style/TextLabel"
                 tools:ignore="HardcodedText" />
@@ -57,15 +60,16 @@
                 style="@style/WidthParent_HeightWrap"
                 app:hintEnabled="false"
                 >
-<!--                this is the number field-->
+<!--                this is the number field for Fahrenheit-->
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NumberBoxFh"
                     style="@style/NumberBox"
                     android:text="32"
                     tools:ignore="HardcodedText,TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-        <!--        this makes some space between the elements, insteed of margin or padding-->
+        <!--        this makes some space between the elements, instead of margin or padding-->
         <Space style="@style/SpaceStyle"/>
 <!--        this is the layout that holds the 2 buttons-->
         <LinearLayout
@@ -79,6 +83,7 @@
                 android:id="@+id/ButtonReset"
                 style="@style/BaseButton"
                 android:text="Reset"
+                android:onClick="buttonResetAction"
                 tools:ignore="HardcodedText"
                 />
 <!--            this is the space between the buttons-->
@@ -90,6 +95,7 @@
                 android:id="@+id/ButtonCalculate"
                 style="@style/BaseButton"
                 android:text="Calculate"
+                android:onClick="buttonCalculateAction"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
     </LinearLayout>
