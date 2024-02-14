@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-
+<!--    this is used to position the widgets-->
     <style name="WidthParent_HeightWrap">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+<!--    this is used for the spaces between the number fields-->
     <style name="SpaceStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
     </style>
-
+<!--    this is the global style of the application-->
     <style name="GlobalStyle">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
         <item name="android:background">@color/black</item>
     </style>
+<!--    widget label style-->
     <style name="TextLabel" parent="WidthParent_HeightWrap">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">22sp</item>
-        <!--<item name="tools:ignore">HardcodedText</item>-->
-
+        <!--<item name="tools:ignore">HardcodedText</item>     i tried to make a style that ignores warnings in a widget-->
     </style>
-    <style name="TextBox" parent="WidthParent_HeightWrap">
+<!--    number widget style-->
+    <style name="NumberBox" parent="WidthParent_HeightWrap">
         <item name="android:textColor">@color/white</item>
         <item name="android:background">#808080</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:inputType">number</item>
     </style>
+<!--    button style-->
     <style name="BaseButton">
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_width">115dp</item>
