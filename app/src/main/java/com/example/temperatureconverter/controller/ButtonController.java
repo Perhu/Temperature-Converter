@@ -1,17 +1,16 @@
 package com.example.temperatureconverter.controller;
 
+import android.annotation.SuppressLint;
 import android.view.View;
-
 import com.example.temperatureconverter.MainActivity;
 import com.example.temperatureconverter.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class ButtonController {
-
     //  buffer variable that is used to monitor if Celsius is changed
     private double theCl=0;
     //Using the variable to access the View
-    private View view;
+    private final View view;
 
     public ButtonController(MainActivity theActivity){
         //Linking the View to the controller from the Main
@@ -21,14 +20,15 @@ public class ButtonController {
     //    Getter for the Celsius field
     private TextInputEditText getFieldCel()
     {
-        return (TextInputEditText) view.findViewById(R.id.NumberBoxCel);
+        return view.findViewById(R.id.NumberBoxCel);
     }
     //    getter for fahrenheit field
     private TextInputEditText getFieldFh()
     {
-        return (TextInputEditText) view.findViewById(R.id.NumberBoxFh);
+        return view.findViewById(R.id.NumberBoxFh);
     }
     //    function to reset the values
+    @SuppressLint("SetTextI18n")
     public void buttonResetAction() {
         getFieldCel().setText("0");
         getFieldFh().setText("32");
@@ -37,7 +37,7 @@ public class ButtonController {
     public void buttonCalculateAction() {
         //parsing the values from String to double
         double cl=Double.parseDouble(String.valueOf(getFieldCel().getText()));
-        double fh=Double.parseDouble(String.valueOf(getFieldFh().getText()));;
+        double fh=Double.parseDouble(String.valueOf(getFieldFh().getText()));
         /*
         the way i'm checking which field is changed is by comparing
         the buffer variable to the current value of Celsius.

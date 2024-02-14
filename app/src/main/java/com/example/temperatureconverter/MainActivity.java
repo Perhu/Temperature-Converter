@@ -3,9 +3,7 @@ package com.example.temperatureconverter;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import com.example.temperatureconverter.controller.ButtonController;
-import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
